@@ -1,0 +1,8 @@
+[slack]
+API_TOKEN: xxxx-11111111111-xxXx1xxXxxxxx1XXxxxxXxXx
+
+[imgur]
+client_id: xxx1111x1111x11
+client_secret: 11x1x1x11xx11x1x1111x11x1111x1x11xx11111
+access_token: xx111111xx1111xx1111x1xxx1x1x11x11111111
+refresh_token: 1x1x11111111x1x1x1111x1111111111111xx1xx
