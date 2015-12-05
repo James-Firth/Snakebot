@@ -8,6 +8,7 @@ import os
 import ConfigParser
 
 snakebot_config = None
+curr_dir =  os.path.dirname(os.path.realpath(__file__))
 
 def upload_to_imgur():
 	global snakebot_config
@@ -40,10 +41,10 @@ def upload_to_imgur():
 
 
 
-@respond_to('pic', re.IGNORECASE)
+@respond_to('pic.*|snap', re.IGNORECASE)
 def post_pic(message):
 		print "Taking pic..."
-		subprocess.call(["take_photo.sh"], shell=True)
-		message.reply('Taking pic, please wait...')
+		subprocess.call([os.path.join(curr_dir,"take_photo.sh")], shell=True)
+		message.send('Taking pic, please wait...')
 		link = upload_to_imgur()
 		message.reply("Link %s" % (link))
